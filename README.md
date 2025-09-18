@@ -1,4 +1,4 @@
-The content is organized into three main sections: **Code**, **Data**, and **Output**.  
+The content is organized into two main sections: **Code**, **Data**
 
 ---
 
@@ -54,18 +54,6 @@ This section contains the datasets used in the study:
 
 ---
 
-## 3. Output
-
-This section contains results and aggregated data from model experiments:  
-
-- **Accumulators_IDB/**  
-  Nested CV error accumulations on the IDB dataset (used for error distribution plots).  
-
-- **Accumulators/**  
-  Error accumulations for models trained on ILD (second part of the study).  
-
-- **IDB_results_p1/** and **IDB_results_p2/**  
-  Cross-validation fold results for Part 1 and Part 2.  
 
 - **ILD_results_p1/**  
   ILD results obtained after training on IDB (Part 1).  
