@@ -52,11 +52,3 @@ This section contains the datasets used in the study:
 - **IDB.csv** – Initial Database (IDB)  
 - **ILD.csv** – Independent Literature Data (ILD)  
 
----
-
-
-- **ILD_results_p1/**  
-  ILD results obtained after training on IDB (Part 1).  
-
----
-
