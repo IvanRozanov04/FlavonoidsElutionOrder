@@ -3,10 +3,10 @@
 
 
 1. **Applied only to IDB**  
-   The entire ILD dataset was used for training; this step applies only to the Internal Database (IDB).
+   The entire ILD dataset was used for training; this step is applied only to the IDB.
 
 2. **Stratify dataset by retention time**  
-   Performed using the `get_retention_time_class(...)` function, which assigns each retention time (RT) to a class used for dataset stratification.
+   Performed using the `get_retention_time_class(...)` function, which assigns each retention time to a class used for dataset stratification.
 
 3. **Align atom numbering**  
    Performed using the `reindex_to_mcs(...)` method from the `KernelFPGenerator` class.  
