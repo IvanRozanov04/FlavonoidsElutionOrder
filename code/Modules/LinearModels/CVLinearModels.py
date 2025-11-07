@@ -6,6 +6,7 @@ from Modules.LinearModels.LMDataPipeline import linear_pairs
 from itertools import combinations
 from Modules.HelperFunctions import compute_safe_linear_regression_metrics,compute_safe_interpolation_metrics
 def PairwiseMetrics(y:np.array,pred:np.array,test_idx:np.array,formulas:np.array,):
+    #Clarification doc_string
     """
     Computes pairwise error rates evaluating the ordering of predicted vs true values
     across all unique pairs of samples, stratified by train/test splits and optionally
@@ -63,6 +64,7 @@ def PairwiseMetrics(y:np.array,pred:np.array,test_idx:np.array,formulas:np.array
     return results
 
 def CV_LogReg(X, y, classes, hyperparameters_grid, n_itter=5,n_splits=5):
+    #Clarification doc_string
     """
     Performs cross-validated logistic regression to select the best regularization
     hyperparameter based on pairwise error rate metrics.
@@ -111,6 +113,7 @@ def CV_LogReg(X, y, classes, hyperparameters_grid, n_itter=5,n_splits=5):
     return best_model
 
 def CV_LinReg(X, y, classes, hyperparameters_grid, n_itter=5,n_splits=5):
+    #Clarification doc_string
     """
     Performs cross-validated ridge regression to select the best regularization
     hyperparameter based on pairwise error rate metrics.
@@ -157,6 +160,7 @@ def CV_LinReg(X, y, classes, hyperparameters_grid, n_itter=5,n_splits=5):
     return best_model
 
 def NestedCV(X, y, classes,formulas, hyperparameters_grid, inner_cv_func, n_outter_splits=5, n_inner_splits=5,n_itter_out=5,n_itter_inner=5,accumulator = None):
+    #Clarification doc_string
     """
     Perform nested cross-validation with optional accumulation of metrics.
 
@@ -224,6 +228,7 @@ def NestedCV(X, y, classes,formulas, hyperparameters_grid, inner_cv_func, n_outt
     return results 
 
 def val_R2(pairs,labels,X_val,y_val,hp):
+    #Clarification doc_string
     """
     Trains a logistic regression model on pairwise data and evaluates the validation R² error.
 
@@ -258,6 +263,7 @@ def val_R2(pairs,labels,X_val,y_val,hp):
     return 1-CorrCoef
 
 def val_PER(pairs,labels,X_val,y_val,hp):
+    #Clarification doc_string
     """
     Trains a logistic regression model on pairwise data and evaluates the validation Pairwise Error Rate (PER).
 
@@ -294,6 +300,7 @@ def val_PER(pairs,labels,X_val,y_val,hp):
     return (1-kendtau)/2
 
 def ILD_cv(pairs,labels,X,y,classes,formulas,hyperparameters_grid,n_itter=5,n_splits=5,accumulator=None,val_type='R2'):
+    #Clarification doc_string
     """
     Performs iterative stratified cross-validation with nested validation and testing on a full dataset.
 

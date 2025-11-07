@@ -9,6 +9,7 @@ from scipy.stats import kendalltau
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 def PairwiseMetrics(y:np.array,pred:np.array,test_idx:np.array,formulas:np.array,):
+    #Clarification doc_string
     """
     Compute pairwise error rates for a ranking task (RankNet-style).
 
@@ -78,6 +79,7 @@ def PairwiseMetrics(y:np.array,pred:np.array,test_idx:np.array,formulas:np.array
     return results
 
 def RankNETCV(X, y, classes, hyperparameters_grid, n_itter=5,n_splits=5):
+    #Clarification doc_string
     """
     Perform cross-validation to select the best RankNet hyperparameters.
 
@@ -133,6 +135,7 @@ def RankNETCV(X, y, classes, hyperparameters_grid, n_itter=5,n_splits=5):
 
 
 def NestedCV(X, y, classes,formulas, hyperparameters_grid, inner_cv_func, n_outter_splits=5, n_inner_splits=5,n_itter_out=5,n_itter_inner=5,accumulator = None):
+    #Clarification doc_string
     """
     Perform nested cross-validation for hyperparameter tuning and model evaluation.
 
@@ -206,6 +209,7 @@ def NestedCV(X, y, classes,formulas, hyperparameters_grid, inner_cv_func, n_outt
 
 
 def val_PER(train_loader, X_val, y_val, hp):
+    #Clarification doc_string
     """
     Train a RankNet model and evaluate ranking performance on a validation set.
 
@@ -238,6 +242,7 @@ def val_PER(train_loader, X_val, y_val, hp):
     return (1 - CorrCoef)/2
 
 def val_R2(train_loader, X_val, y_val, hp):
+    #Clarification doc_string
     """
     Train a RankNet model and evaluate prediction performance using R².
 
@@ -271,6 +276,7 @@ def val_R2(train_loader, X_val, y_val, hp):
 
 
 def ILD_cv(train_loader,X,y,classes,formulas,hyperparameters_grid,n_itter=1,n_splits=5,accumulator = None,val_type = 'R2'):
+    #Clarification doc_string
     """
     Perform cross-validated hyperparameter tuning and evaluation of RankNet
     on an external dataset using a fixed training set.
